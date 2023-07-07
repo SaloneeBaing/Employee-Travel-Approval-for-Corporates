@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>same_department_employee_expenses</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISNEW() &amp;&amp; (Expense__r.Employee__r.Department__c&lt;&gt;  Travel_Approval__r.Department__c ||
+  Travel_Approval__r.Employee_Name__c &lt;&gt;  Expense__r.Employee__c  )</errorConditionFormula>
+    <errorDisplayField>Expense__c</errorDisplayField>
+    <errorMessage>Expense Not Accepted - Invalid Employee or Department</errorMessage>
+</ValidationRule>
